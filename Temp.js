@@ -2,7 +2,7 @@ var temps;
 var i;
 function setup() {
   //put what temperatures you want in Farenheit
-  temps = [212, 100, 1, 2, 10, 415, 150, 75, 77, 1000, 123, 124];
+  temps = [];
   noLoop();
 }
 function draw() {
