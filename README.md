@@ -1,2 +1,2 @@
 # Celsius to Farenheit conversion
-Results show up in the console.
+Needs a console to show results. 
