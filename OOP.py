@@ -4,7 +4,7 @@ class Temperature:
     self.kind = kind
     
   def add_degrees(self, degrees):
-    self.degrees.append(add_temperature)
+    self.degrees.append(add_degrees)
   
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
