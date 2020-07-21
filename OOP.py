@@ -8,9 +8,10 @@ class Temperature:
   
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
+    F1 = ((F-32)*(5/9))
     super().__init__(degrees, kind) 
     #the 59 and 63 are placeholders.
-    self.C_convert = "59"
+    self.C_convert = F1
     self.K_convert = "63"
   
 class Celsius(Temperature):
