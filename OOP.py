@@ -2,17 +2,16 @@ class Temperature:
   def __init__(self, degrees, kind):
     self.degrees = degrees
     self.kind = kind
-    
-  def add_degrees(self, degrees):
-    self.degrees.append(add_degrees)
   
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
-    F1 = ((F-32)*(5/9))
     super().__init__(degrees, kind) 
     #the 59 and 63 are placeholders.
-    self.C_convert = F1
-    self.K_convert = "63"
+  def __repr__(self):
+    C1 = (((self.degrees -32)*5)/9)
+    return C1 
+Temp1 = (15, "Fahrenheit")
+print(Temp1)
   
 class Celsius(Temperature):
   def __init__(self, degrees, kind):
