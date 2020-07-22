@@ -1,6 +1,6 @@
 def C_to_F():
   c = int(input("How many degrees Centigrade?"))
-  F1 = (((c/5)*9)+32)
+  F1 = ( ( (c/5) * 9 ) + 32)
   print(str(F1) + ' degrees Centigrade')
   Again = input("Do you want to convert again? (Y) or (N)")
   if Again == "Y":
@@ -10,7 +10,7 @@ def C_to_F():
 
 def T_to_C():
   f = int(input("How many degrees Fahrenheit?"))
-  C1 = (((f-32)*5)/9)
+  C1 = ( ( (f - 32) * 5) /9)
   # Have to convert C1 to a string as it is a float and can't be added with another string.
   print(str(C1) + ' degrees Fahrenheit')
   Again = input("Do you want to convert again? (Y) or (N)")
@@ -21,8 +21,8 @@ def T_to_C():
 
  def C_to_K():
   C2 = int(input("How many degrees Centigrade?"))
-  K = (C2+273.15)
-  print(str(K)+ ' degrees Kelvin')
+  K = (C2 + 273.15)
+  print(str(K) + ' degrees Kelvin')
   Again = input("Do you want to convert again? (Y) or (N)")
   if Again == "Y":
     temperature_convert()
