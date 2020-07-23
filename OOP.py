@@ -25,3 +25,7 @@ class Kelvin(Temperature):
 Temp1 = Fahrenheit(15, "Fahrenheit")
 print(Temp1)
   
+def Setup():
+  print("Welcome to the Temperature converter!")
+  Rep = input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?"
+Setup()
