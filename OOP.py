@@ -27,9 +27,11 @@ print(Temp1)
   
 def Setup():
   print("Welcome to the Temperature converter!")
-  Rep = input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?"
+  Rep = int(input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?")
   if Rep == 1:
-   return None
+   D1 = Fahrenheit.degrees()
+   F = Fahrenheit(D1, "Fahrenheit")
+   print(F)
   elif Rep == 2:
    return None
   elif Rep == 3:
