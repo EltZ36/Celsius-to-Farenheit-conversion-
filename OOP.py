@@ -14,13 +14,13 @@ class Celsius(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
   def __repr__(self):
-    return f'{}.'
+    return f'{self.degrees} degrees {self.kind} converts to degrees.'
   
 class Kelvin(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
   def __repr__(self):
-    return f'{}.'
+    return f'{self.degrees} degrees {self.kind} converts to degrees.'
 
 Temp1 = Fahrenheit(15, "Fahrenheit")
 print(Temp1)
