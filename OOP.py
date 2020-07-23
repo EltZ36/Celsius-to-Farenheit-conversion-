@@ -33,9 +33,11 @@ def Setup():
    F = Fahrenheit(D1, "Fahrenheit")
    print(F)
   elif Rep == 2:
-   return None
+   C = Celsius(16, "Centigrade")
+   print(C)
   elif Rep == 3:
-   return None
+   K = Kelvin(17, "Kelvin")
+   print(K) 
   else:
     Setup()
 Setup()
