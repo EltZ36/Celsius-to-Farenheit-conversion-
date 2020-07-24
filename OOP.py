@@ -46,4 +46,8 @@ def Setup():
 Setup()
 
 def Repeat():
- return None
+ Re1 = input("Do you want to convert again? (Y) or (N)")
+ if Re1 == Y:
+   Setup()
+ else:
+   Return None
