@@ -32,12 +32,18 @@ def Setup():
    D1 = Fahrenheit.degrees()
    F = Fahrenheit(D1, "Fahrenheit")
    print(F)
+   Repeat()         
   elif Rep == 2:
    C = Celsius(16, "Centigrade")
    print(C)
+   Repeat()
   elif Rep == 3:
    K = Kelvin(17, "Kelvin")
-   print(K) 
+   print(K)
+   Repeat()         
   else:
     Setup()
 Setup()
+
+def Repeat():
+ return None
