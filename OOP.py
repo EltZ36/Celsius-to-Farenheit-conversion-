@@ -6,11 +6,11 @@ class Temperature:
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind) 
-  def kind(self):
-    self.kind = (((self.degrees -32) * 5) /9)
+  def C_convert(self):
+    self.C_convert = (((self.degrees -32) * 5) /9)
   def __repr__(self):
     #using an F string
-    return f'{self.degrees} degrees {self.kind} converts to degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {self.C_convert} degrees.'
 
 class Celsius(Temperature):
   def __init__(self, degrees, kind):
