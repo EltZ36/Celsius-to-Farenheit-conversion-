@@ -6,6 +6,8 @@ class Temperature:
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind) 
+  def kind(self):
+    self.kind = (((self.degrees -32) * 5) /9)
   def __repr__(self):
     #using an F string
     return f'{self.degrees} degrees {self.kind} converts to degrees.'
