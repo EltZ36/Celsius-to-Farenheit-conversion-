@@ -17,12 +17,20 @@ class Celsius(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
   def __repr__(self):
-    return f'{self.degrees} degrees {self.kind} converts to degrees.'
+    Player_input = int(input("How many degrees?"))
+    self.degrees = Player_input 
+    # Celsius to Fahrenheit
+    x = (((self.degrees / 5) * 9)  + 32)
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
   
 class Kelvin(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
   def __repr__(self):
+    Player_input = int(input("How many degrees?"))
+    self.degrees = Player_input 
+    # Kelvin to Fahrenheit
+    x = ((9/5 * self.degrees)+32) 
     return f'{self.degrees} degrees {self.kind} converts to degrees.'
 
 Temp1 = Fahrenheit(15, "Fahrenheit")
