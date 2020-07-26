@@ -6,9 +6,11 @@ class Temperature:
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind) 
+  def input(self):
+    Player_input = int(input("How many degrees?")
+    self.degrees = Player_input
   def __repr__(self):
-    Player_input = int(input("How many degrees?"))
-    self.degrees = Player_input 
+    self.input() 
     x = (((self.degrees -32) * 5) /9)
     #using an F string
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
