@@ -1,3 +1,9 @@
+'''
+Goals:
+-Have more options
+-Make code much more clean
+-Test and make sure it works
+'''
 class Temperature:
   def __init__(self, degrees, kind):
     self.degrees = degrees
@@ -7,9 +13,11 @@ class Temperature:
     self.degrees = Player_input
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
+    #using super function. Can't really explain what it does. 
     super().__init__(degrees, kind) 
   def __repr__(self):
     self.input() 
+    # Fahrenheit to Celsius 
     x = (((self.degrees -32) * 5) /9)
     #using an F string
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
