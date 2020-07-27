@@ -2,7 +2,7 @@
 Goals:
 -Have more options
 -Make code much more clean
--Test and make sure it works
+-Make it work
 '''
 class Temperature:
   def __init__(self, degrees, kind):
@@ -44,13 +44,13 @@ def Setup():
   print("Welcome to the Temperature converter!")
   Rep = int(input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?")
   if Rep == 1:
-   return None
+   y = 0
    Repeat()         
   elif Rep == 2:
-   return None
+   y = 0
    Repeat()
   elif Rep == 3:
-   return None
+   y = 0
    Repeat()         
   else:
     Setup()
