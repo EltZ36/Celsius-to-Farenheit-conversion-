@@ -6,7 +6,7 @@ Goals: -More options
 
 def Repeat():
   Again = input("Do you want to convert again? (Y) or (N)")
-  if Again == "Y":
+  if Again == "Y" or " Y":
     temperature_convert()
   return None
 
