@@ -2,6 +2,8 @@
 Goals: -More options
 -More clean and readable code.
 -Try to make sure if people use this, that there is an int check. 
+-Make the temperature conversions more accurate.
+-Allow decimal inputs for conversions.
 '''
 
 def Repeat():
