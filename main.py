@@ -24,7 +24,7 @@ def F_to_C():
   else:
     return None
 
- def C_to_K():
+def C_to_K():
   C2 = int(input("How many degrees Centigrade?"))
   K = (C2 + 273.15)
   print(str(K) + " degrees Kelvin")
@@ -34,7 +34,7 @@ def F_to_C():
   else:
     return None
   
- def K_to_C():
+def K_to_C():
   k1 = int(input("How many degrees Kelvin?"))
   C = (k1 -273.15)
   print(str(C) + " degrees Celsius")
