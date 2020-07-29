@@ -3,7 +3,7 @@ Goals: -More options
 -More clean and readable code.
 -Try to make sure if people use this, that there is an int check. 
 -Make the temperature conversions more accurate.
--Allow decimal inputs for conversions.
+-Reorder the conversions.
 '''
 
 def Repeat():
@@ -21,8 +21,14 @@ def C_to_F():
 def F_to_C():
   f = float(input("How many degrees Fahrenheit?"))
   C1 = ( ( (f - 32) * 5) /9)
-  # Have to convert C1 to a string as it is a float and can't be added with another string.
+  # Have to convert this(C1) into a string as it is a float and can't be added with another string.
   print(str(C1) + ' degrees Fahrenheit')
+  Repeat()
+  
+def F_to_K():
+  f2 = float(input("How many degrees Fahrenheit?"))
+  K2 = ((((f2 -32) * 5) /9) +273.15)
+  print(str(K2) + ' degrees Kelvin')
   Repeat()
 
 def C_to_K():
@@ -42,7 +48,7 @@ def temperature_convert():
   while True:
     try:
       #\n indicates the end of a line and prints the code next to the \n on another line.
-       Question = int(input("Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nKelvin to Centigrade (4)"))
+       Question = int(input("Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nFahrenheit to Kelvin (4) \nKelvin to Centigrade (5)"))
     except ValueError:
         print("Please type in the number conversion you want again.")
         continue
@@ -57,6 +63,8 @@ def temperature_convert():
   elif Question == 3:
     C_to_K()
   elif Question == 4:
+    F_to_K()
+  elif Question == 5:
     K_to_C()
   else:
     print("Please type in the number next to the conversion you want.")
