@@ -56,7 +56,7 @@ def temperature_convert():
   elif Question == 2:
     Question = True
     while Question == True:
-      T_to_C()
+      F_to_C()
       break
   elif Question == 3:
     Question = True
