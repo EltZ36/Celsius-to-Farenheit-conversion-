@@ -1,7 +1,8 @@
 '''
 Goals: -More options
--More clean code.
+-More clean and readable code.
 '''
+
 def C_to_F():
   c = int(input("How many degrees Centigrade?"))
   F1 = ( ( (c/5) * 9 ) + 32)
