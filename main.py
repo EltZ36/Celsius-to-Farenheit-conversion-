@@ -38,27 +38,14 @@ def K_to_C():
 def temperature_convert():
   Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2), Centigrade to Kelvin? (3) or Kelvin to Centigrade? (4)"))
   if Question == 1: 
-    Question = True
-    while Question == True:
-      #Nested Function and not recursion.
-      C_to_F()
-      #Break stops the while loop from looping and starting the conversion over again.
-      break
+    #Nested Function and not recursion.
+    C_to_F()
   elif Question == 2:
-    Question = True
-    while Question == True:
-      F_to_C()
-      break
+    F_to_C()
   elif Question == 3:
-    Question = True
-    while Question == True:
-      C_to_K()
-      break
+    C_to_K()
   elif Question == 4:
-    Question = True
-    while Question == True:
-      K_to_C()
-      break
+    K_to_C()
   else:
     print("Please type in the number next to the conversion you want.")
     # Guess this is a form of recursion where the function calls itself again.
