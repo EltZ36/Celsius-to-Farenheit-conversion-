@@ -8,18 +8,18 @@ Goals: -More options
 
 def Repeat():
   Again = input("Do you want to convert again? (Y) or (N)")
-  if Again == "Y" or " Y":
+  if Again == "Y" or Again == " Y":
     temperature_convert()
   return None
 
 def C_to_F():
-  c = int(input("How many degrees Centigrade?"))
+  c = float(input("How many degrees Centigrade?"))
   F1 = ( ( (c/5) * 9 ) + 32)
   print(str(F1) + ' degrees Centigrade')
   Repeat()
 
 def F_to_C():
-  f = int(input("How many degrees Fahrenheit?"))
+  f = float(input("How many degrees Fahrenheit?"))
   C1 = ( ( (f - 32) * 5) /9)
   # Have to convert C1 to a string as it is a float and can't be added with another string.
   print(str(C1) + ' degrees Fahrenheit')
