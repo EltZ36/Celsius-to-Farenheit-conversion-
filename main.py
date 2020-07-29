@@ -36,6 +36,16 @@ def K_to_C():
   Repeat()
   
 def temperature_convert():
+  #Checks if the question option is not a float or another word. The else statement at lines 52-54 makes sure that the person can type in the number again if they make a mistake.
+  while True:
+    try:
+      Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2), Centigrade to Kelvin? (3) or Kelvin to Centigrade? (4)"))
+    except ValueError:
+        print("Please type in the number conversion you want again.")
+        continue
+    else:
+      # breaks the while loop and makes the loop not occur again.
+      break
   Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2), Centigrade to Kelvin? (3) or Kelvin to Centigrade? (4)"))
   if Question == 1: 
     #Nested Function and not recursion.
