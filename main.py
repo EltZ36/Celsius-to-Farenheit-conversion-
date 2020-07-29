@@ -46,7 +46,6 @@ def temperature_convert():
     else:
       # breaks the while loop and makes the loop not occur again.
       break
-  Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2), Centigrade to Kelvin? (3) or Kelvin to Centigrade? (4)"))
   if Question == 1: 
     #Nested Function and not recursion.
     C_to_F()
