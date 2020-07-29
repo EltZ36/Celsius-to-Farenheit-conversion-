@@ -26,13 +26,13 @@ def F_to_C():
   Repeat()
 
 def C_to_K():
-  C2 = int(input("How many degrees Centigrade?"))
+  C2 = float(input("How many degrees Centigrade?"))
   K = (C2 + 273.15)
   print(str(K) + " degrees Kelvin")
   Repeat()
   
 def K_to_C():
-  k1 = int(input("How many degrees Kelvin?"))
+  k1 = float(input("How many degrees Kelvin?"))
   C = (k1 -273.15)
   print(str(C) + " degrees Celsius")
   Repeat()
