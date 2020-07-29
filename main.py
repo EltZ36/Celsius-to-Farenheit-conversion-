@@ -39,7 +39,8 @@ def temperature_convert():
   #Checks if the question option is not a float or another word. The else statement at lines 52-54 makes sure that the person can type in the number again if they make a mistake.
   while True:
     try:
-      Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2), Centigrade to Kelvin? (3) or Kelvin to Centigrade? (4)"))
+      #\n indicates the end of a line and prints the code next to the \n on another line.
+       Question = int(input("Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nKelvin to Centigrade (4)"))
     except ValueError:
         print("Please type in the number conversion you want again.")
         continue
