@@ -1,3 +1,7 @@
+'''
+Goals: -More options
+-More clean code.
+'''
 def C_to_F():
   c = int(input("How many degrees Centigrade?"))
   F1 = ( ( (c/5) * 9 ) + 32)
@@ -8,7 +12,7 @@ def C_to_F():
   else:
     return None
 
-def T_to_C():
+def F_to_C():
   f = int(input("How many degrees Fahrenheit?"))
   C1 = ( ( (f - 32) * 5) /9)
   # Have to convert C1 to a string as it is a float and can't be added with another string.
@@ -22,7 +26,17 @@ def T_to_C():
  def C_to_K():
   C2 = int(input("How many degrees Centigrade?"))
   K = (C2 + 273.15)
-  print(str(K) + ' degrees Kelvin')
+  print(str(K) + " degrees Kelvin")
+  Again = input("Do you want to convert again? (Y) or (N)")
+  if Again == "Y":
+    temperature_convert()
+  else:
+    return None
+  
+ def K_to_C():
+  k1 = int(input("How many degrees Kelvin?"))
+  C = (k1 -273.15)
+  print(str(C) + " degrees Celsius")
   Again = input("Do you want to convert again? (Y) or (N)")
   if Again == "Y":
     temperature_convert()
@@ -30,7 +44,7 @@ def T_to_C():
     return None
   
 def temperature_convert():
-  Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2),  or Centigrade to Kelvin? (3)"))
+  Question = int(input("Do you want to convert from Centigrade to Fahrenheit (1) , Fahrenheit to Centigrade? (2), Centigrade to Kelvin? (3) or Kelvin to Centigrade? (4)"))
   if Question == 1: 
     Question = True
     while Question == True:
@@ -48,10 +62,15 @@ def temperature_convert():
     while Question == True:
       C_to_K()
       break
+  elif Question == 4:
+    Question = True
+    while Question == True:
+      K_to_C()
+      break
   else:
     print("Please type in the number next to the conversion you want.")
     # Guess this is a form of recursion where the function calls itself again.
     temperature_convert()
 
-print('Welcome!')
+print('Welcome to the Temperature Converter!')
 temperature_convert()
