@@ -14,6 +14,7 @@ def Repeat():
   return None
 
 def C_to_F():
+  # float allows for both integers and decimals
   c = float(input("How many degrees Centigrade?"))
   F1 = ( ( (c/5) * 9 ) + 32)
   print(str(F1) + ' degrees Centigrade')
@@ -45,8 +46,12 @@ def K_to_C():
   Repeat()
   
 def temperature_convert():
-  #Checks if the question option is not a float or another word. The else statement at lines 52-54 makes sure that the person can type in the number again if they make a mistake.
+  # Lines 49-64 checks if the question option is not a float or another word. The else statement at lines 52-54 makes sure that the person can type in the number again if they make a mistake.
   while True:
+    '''
+    The try clause displays this question and in the except, if the input from the person isn't an integer, the while loop will start at the beginning again.
+    If the input from the person is an int and passes, the while loop breaks. 
+    '''
     try:
       #\n indicates the end of a line and prints the code next to the \n on another line.
        Question = int(input("Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nFahrenheit to Kelvin (4) \nKelvin to Centigrade (5)"))
@@ -57,7 +62,7 @@ def temperature_convert():
       # breaks the while loop and makes the loop not occur again.
       break
   if Question == 1: 
-    #Nested Function and not recursion.
+    #Nested Function.
     C_to_F()
   elif Question == 2:
     F_to_C()
