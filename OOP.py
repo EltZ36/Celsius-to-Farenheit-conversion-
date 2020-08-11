@@ -9,7 +9,7 @@ class Temperature:
     self.degrees = degrees
     self.kind = kind
   def input(self):
-    Player_input = int(input("How many degrees?")
+    Player_input = int(input("How many degrees?"))
     self.degrees = Player_input
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
@@ -42,7 +42,7 @@ class Kelvin(Temperature):
   
 def Setup():
   print("Welcome to the Temperature converter!")
-  Rep = int(input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?")
+  Rep = int(input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?"))
   if Rep == 1:
    y = 0
    Repeat()         
@@ -61,4 +61,4 @@ def Repeat():
  if Re1 == Y:
    Setup()
  else:
-   Return None
+   return None
