@@ -40,25 +40,29 @@ class Kelvin(Temperature):
     x = ((9/5 * self.degrees)+32) 
     return f'{self.degrees} degrees {self.kind} converts to degrees.'
   
-def Setup():
-  print("Welcome to the Temperature converter!")
-  Rep = int(input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Celsius to Kelvin (3)?"))
-  if Rep == 1:
-   y = 0
-   Repeat()         
-  elif Rep == 2:
-   y = 0
-   Repeat()
-  elif Rep == 3:
-   y = 0
-   Repeat()         
-  else:
-    Setup()
-Setup()
-
 def Repeat():
  Re1 = input("Do you want to convert again? (Y) or (N)")
  if Re1 == Y:
    Setup()
  else:
    return None
+  
+def Setup():
+  print("Welcome to the Temperature converter!")
+  Rep = int(input("What conversion do you want to do? Fahrenheit to Celsius (1), Celsius to Fahrenheit (2), or Kelvin to Fahrenheit (3)?"))
+  if Rep == 1:
+   Temp1 = Fahrenheit(0, "Fahrenheit")
+   print(Temp1)
+   Repeat()         
+  elif Rep == 2:
+   Temp1 = Celsius(0, "Celsius")
+   print(Temp1)
+   Repeat()
+  elif Rep == 3:
+   Temp1 = Kelvin(0 , "Kelvin")
+   print(Temp1)
+   Repeat()         
+  else:
+    Setup()
+Setup()
+
