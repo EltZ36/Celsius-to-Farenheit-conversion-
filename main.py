@@ -34,48 +34,38 @@ def F_to_K():
   Repeat()
 
 def C_to_K():
-  C2 = float(input("How many degrees Centigrade?"))
-  K = (C2 + 273.15)
+  c2 = float(input("How many degrees Centigrade?"))
+  K = (c2 + 273.15)
   print(str(K) + " degrees Kelvin")
   Repeat()
   
 def K_to_C():
   k1 = float(input("How many degrees Kelvin?"))
-  C = (k1 -273.15)
-  print(str(C) + " degrees Celsius")
+  C2 = (k1 -273.15)
+  print(str(c2) + " degrees Celsius")
   Repeat()
-  
-def temperature_convert():
-  # Lines 49-64 checks if the question option is not a float or another word. The else statement at lines 52-54 makes sure that the person can type in the number again if they make a mistake.
-  while True:
-    '''
-    The try clause displays this question and in the except, if the input from the person isn't an integer, the while loop will start at the beginning again.
-    If the input from the person is an int and passes, the while loop breaks. 
-    '''
-    try:
-      #\n indicates the end of a line and prints the code next to the \n on another line.
-       Question = int(input("Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nFahrenheit to Kelvin (4) \nKelvin to Centigrade (5)"))
-    except ValueError:
-        print("Please type in the number conversion you want again.")
-        continue
-    else:
-      # breaks the while loop and makes the loop not occur again.
-      break
-  if Question == 1: 
-    #Nested Function.
-    C_to_F()
-  elif Question == 2:
-    F_to_C()
-  elif Question == 3:
-    C_to_K()
-  elif Question == 4:
-    F_to_K()
-  elif Question == 5:
-    K_to_C()
-  else:
-    print("Please type in the number next to the conversion you want.")
-    # Guess this is a form of recursion where the function calls itself again.
-    temperature_convert()
 
+def K_to_F():
+  k2 = float(input("How may degrees Kelvin?"))
+  F2 = (((k2 - 273.15) * 9/5) + 32) 
+  print(str(F2) + " degrees Kelvin")
+  Repeat()
+
+def temperature_convert():
+ # Lines 55 - 70 check if the input is correct and if it is, then it will convert the temperature. Otherwise if the input(key) isn't found, the while loop will continue.
+  Question = "Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nFahrenheit to Kelvin (4) \nKelvin to Centigrade (5) \nKelvin to Fahrenheit (6)"
+  print(Question)
+  while True:
+   try:
+    #using a dictionary to reduce the amount of if statements.
+    options ={
+    "1":C_to_F, "2":F_to_C, "3":C_to_K, '4':F_to_K, '5':K_to_C, '6':K_to_F
+    }  
+    choice = input("Select the number of the conversion here: ")
+    options[choice]()
+    break
+   except KeyError:
+    print("Sorry, please type in the number of the conversion again")
+    continue 
 print('Welcome to the Temperature Converter!')
 temperature_convert()
