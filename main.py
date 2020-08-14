@@ -59,7 +59,7 @@ def temperature_convert():
    try:
     #using a dictionary to reduce the amount of if statements.
     options ={
-    "1":C_to_F, "2":F_to_C, "3":C_to_K, '4':F_to_K, '5':K_to_C
+    "1":C_to_F, "2":F_to_C, "3":C_to_K, '4':F_to_K, '5':K_to_C, '6':K_to_F
     }  
     choice = input("Select the number of the conversion here: ")
     options[choice]()
