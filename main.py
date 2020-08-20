@@ -51,7 +51,8 @@ def K_to_F():
 
 def temperature_convert():
  # Lines 55 - 70 check if the input is correct and if it is, then it will convert the temperature. Otherwise if the input(key) isn't found, the while loop will continue.
-  Question = "Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) \nFahrenheit to Kelvin (4) \nKelvin to Centigrade (5) \nKelvin to Fahrenheit (6)"
+  Question = """Which conversion do you want?\nCentigrade to Fahrenheit (1) \nFahrenheit to Centigrade(2) \nCentigrade to Kelvin (3) 
+  \nFahrenheit to Kelvin (4) \nKelvin to Centigrade (5) \nKelvin to Fahrenheit (6)"""
   print(Question)
   while True:
    try:
@@ -62,6 +63,7 @@ def temperature_convert():
     choice = input("Select the number of the conversion here: ")
     options[choice]()
     break
+  #Keyerror occurs when the input/key isn't found in the dictionary.
    except KeyError:
     print("Sorry, please type in the number of the conversion again")
     continue 
