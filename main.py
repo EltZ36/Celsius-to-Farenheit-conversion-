@@ -1,24 +1,14 @@
 '''
 Goals: -More options
 -More clean and readable code.
--Less if statements.
--Try to make sure if people use this, that there is an int check. 
 -Make the temperature conversions more accurate.
 -Reorder the conversions.
 '''
-
 def Repeat():
   Again = input("Do you want to convert again? (Y) or (N)")
-  if Again == "Y" or Again == " Y":
+  if Again == "Y" or Again == " Y" or Again =="y":
     temperature_convert()
   return None
-
-def C_to_F():
-  # float allows for both integers and decimals
-  c = float(input("How many degrees Centigrade?"))
-  F1 = ( ( (c/5) * 9 ) + 32)
-  print(str(F1) + ' degrees Centigrade')
-  Repeat()
 
 def F_to_C():
   f = float(input("How many degrees Fahrenheit?"))
@@ -33,6 +23,14 @@ def F_to_K():
   print(str(K2) + ' degrees Kelvin')
   Repeat()
 
+
+def C_to_F():
+  # float allows for both integers and decimals.
+  c = float(input("How many degrees Centigrade?"))
+  F1 = ( ( (c/5) * 9 ) + 32)
+  print(str(F1) + ' degrees Centigrade')
+  Repeat()
+
 def C_to_K():
   c2 = float(input("How many degrees Centigrade?"))
   K = (c2 + 273.15)
@@ -41,7 +39,7 @@ def C_to_K():
   
 def K_to_C():
   k1 = float(input("How many degrees Kelvin?"))
-  C2 = (k1 -273.15)
+  C2 = (k1 - 273.15)
   print(str(c2) + " degrees Celsius")
   Repeat()
 
