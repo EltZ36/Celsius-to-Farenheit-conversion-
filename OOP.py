@@ -16,7 +16,7 @@ class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
     #using super function to call the init (initialization) function of the temperature class.
     super().__init__(degrees, kind) 
-  def __repr__(self):
+  def F_to_C(self):
     self.input() 
     # Fahrenheit to Celsius 
     x = (((self.degrees -32) * 5) /9)
@@ -26,7 +26,7 @@ class Fahrenheit(Temperature):
 class Celsius(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
-  def __repr__(self):
+  def C_to_F(self):
     self.input()
     # Celsius to Fahrenheit
     x = (((self.degrees / 5) * 9)  + 32)
@@ -35,10 +35,10 @@ class Celsius(Temperature):
 class Kelvin(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
-  def __repr__(self):
+  def K_to_F(self):
     self.input()
     # Kelvin to Fahrenheit
-     x = ((9/5 * (self.degrees-273.15))+32) 
+    x = ((9/5 * (self.degrees-273.15))+32) 
     return f'{self.degrees} degrees {self.kind} converts to degrees.'
 
 def Repeat():
