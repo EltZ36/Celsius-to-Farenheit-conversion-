@@ -11,6 +11,12 @@ class Temperature:
   def input(self):
     Player_input = int(input("How many degrees?"))
     self.degrees = Player_input
+  def Repeat():
+    Re1 = input("Do you want to convert again? (Y) or (N)")
+    if Re1 == Y:
+      Setup()
+    else:
+      return None
 
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
@@ -23,7 +29,12 @@ class Fahrenheit(Temperature):
     #using an F string
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
   def F_to_K(self):
-    pass
+    self.input()
+    # Fahrenheit to Kelvin 
+    x = ((((self.degrees-32)*5)/9)+273.15)
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+  def F_to_R(self):
+    self.input()
 
 class Celsius(Temperature):
   def __init__(self, degrees, kind):
@@ -34,8 +45,13 @@ class Celsius(Temperature):
     x = (((self.degrees / 5) * 9)  + 32)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
   def C_to_K(self):
-    pass
-  
+    self.input()
+    # Celsius to Kelvin 
+    x = ( self.degrees + 273.15)
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+  def C_to_R(self):
+    self.input()
+
 class Kelvin(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
@@ -45,14 +61,21 @@ class Kelvin(Temperature):
     x = ((9/5 * (self.degrees-273.15))+32) 
     return f'{self.degrees} degrees {self.kind} converts to degrees.'
   def K_to_C(self):
-    pass
+    self.input()
+    x = (self.degrees - 273.15)
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+  def K_to_R(self):
+    self.input()
 
-def Repeat():
- Re1 = input("Do you want to convert again? (Y) or (N)")
- if Re1 == Y:
-   Setup()
- else:
-   return None
+class Rankine(Temperature):
+  def __init__(self, degrees, kind):
+    super().__init__(degrees, kind)
+  def R_to_F(self):
+    self.input()
+  def R_to_C(self):
+    self.input()
+  def R_to_K(self):
+    self.input()
 
 def Setup():
   print("Welcome to the Temperature converter!")
