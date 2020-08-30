@@ -59,11 +59,12 @@ class Kelvin(Temperature):
     self.input()
     # Kelvin to Fahrenheit
     x = ((9/5 * (self.degrees-273.15))+32) 
-    return f'{self.degrees} degrees {self.kind} converts to degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
   def K_to_C(self):
     self.input()
     x = (self.degrees - 273.15)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    self.Repeat()
   def K_to_R(self):
     self.input()
 
@@ -84,19 +85,19 @@ def Setup():
   """
   print(Response)
   Temp1 = Fahrenheit(0, "Fahrenheit")
-  Temp2 = Fahreneheit(0, "Fahrenheit")
-  Temp3 = Celsius(0, "Celsius")
-  Temp4 = Celsius(0, "Celsius")
-  Temp5 = Kelvin(0,"Kelvin")
-  Temp6 = Kelvin(0,"Kelvin")
+  Temp2 = Celsius(0, "Celsius")
+  Temp3 = Kelvin(0, "Kelvin")
+  Temp4 = Rankine(0, "Rankine")
   while True:
    try:
     #using a dictionary to reduce the amount of if statements.
     options ={
-    "1":Temp1.F_to_C, "2":Temp2.F_to_K, "3":Temp3.C_to_F, "4":Temp4.C_to_K, "5":Temp5.K_to_F, "6":Temp6.K_to_C
+    "1":Temp1.F_to_C, "2":Temp1.F_to_K, "3":Temp2.C_to_F, "4":Temp2.C_to_K, "5":Temp3.K_to_F, "6":Temp3.K_to_C
     }  
     choice = input("Select the number of the conversion here: ")
-    options[choice]()
+    print(options[choice]())
+    repeat = Temperature.Repeat()
+    print(repeat)
     break
    except KeyError:
     print("Sorry, please type in the number of the conversion again")
