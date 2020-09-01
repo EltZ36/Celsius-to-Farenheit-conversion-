@@ -1,11 +1,9 @@
 '''
-Goals: -More options
--More clean and readable code.
+Goals: -More clean and readable code.
 -Make the temperature conversions more accurate.
--Reorder the conversions.
 '''
 
-#The repeat function and this allows the person to repeat a conversion again if they type in Y, y or Y with a space.
+
 def Repeat():
   Again = input("Do you want to convert again? (Y) or (N)")
   if Again == "Y" or Again == " Y" or Again =="y":
