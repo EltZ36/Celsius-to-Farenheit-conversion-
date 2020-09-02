@@ -20,7 +20,6 @@ class Temperature:
 
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
-    #using super function to call the init (initialization) function of the temperature class.
     super().__init__(degrees, kind) 
   def F_to_C(self):
     self.input() 
