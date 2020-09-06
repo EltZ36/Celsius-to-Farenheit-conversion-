@@ -13,7 +13,7 @@ class Temperature:
     self.degrees = Player_input
   def Repeat():
     Re1 = input("Do you want to convert again? (Y) or (N)")
-    if Re1 == Y:
+    if Re1 == "Y" or Re1 == "y":
       Setup()
     else:
       return None
@@ -102,7 +102,6 @@ def Setup():
   """
   print(Response)
   '''
-  I'm pretty sure these are instances of the classes. 
   Temp1 is an instance of the Fahrenheit class, Temp2 is an instance of the Celsius class, and so on.
   '''
   Temp1 = Fahrenheit(0, "Fahrenheit")
