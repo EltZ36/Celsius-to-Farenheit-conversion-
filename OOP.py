@@ -12,11 +12,16 @@ class Temperature:
     Player_input = int(input("How many degrees?"))
     self.degrees = Player_input
   def Repeat():
-    Re1 = input("Do you want to convert again? (Y) or (N)")
-    if Re1 == "Y" or Re1 == "y":
-      Setup()
-    else:
-      return None
+    while True:
+      try:
+        y_or_n = input("Do you want to convert again? (Y) or (N)")
+        repeat = {"Y": Setup, "y":Setup, " y":Setup, " Y":Setup, 
+        "N":exit, "n":exit, " n":exit, " N":exit}
+        print(repeat[y_or_n]())
+        break
+      except KeyError:
+        print("Enter Y or N again please.")
+        continue
 
 class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
@@ -113,7 +118,9 @@ def Setup():
   \nRankine to Celsius (10) \nRankine to Fahrenheit (11) Rankine to Kelvin (12)
   """
   print(Response)
-  #Temp1 is an instance of the Fahrenheit class, Temp2 is an instance of the Celsius class, and so on.
+  '''Temp1 is an instance of the Fahrenheit class, Temp2 is an instance of the Celsius class, and so on.
+  I put in 0 as a placeholder for self.degrees as it doesn't matter and the person will choose the degrees anyway.
+  '''
   Temp1 = Fahrenheit(0, "Fahrenheit")
   Temp2 = Celsius(0, "Celsius")
   Temp3 = Kelvin(0, "Kelvin")
