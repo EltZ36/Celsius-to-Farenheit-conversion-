@@ -5,10 +5,14 @@ Goals: -More clean and readable code.
 
 
 def Repeat():
-  Again = input("Do you want to convert again? (Y) or (N)")
-  if Again == "Y" or Again == " Y" or Again =="y":
-    temperature_convert()
-  return None
+  while True:
+    try:
+      Again = input("Do you want to convert again? (Y) or (N)")
+      Options = {"Y":temperature_convert, "y":temperature_convert, " y":temperature_convert, "Y":temperature_convert, "N":exit, "n":exit}
+      print(Options[Again]())
+    except KeyError:
+      print("Try to enter (Y) or (N) again."
+      Repeat()
 
 #Fahrenheit to Celsius, Kelvin, and Rankine conversions
 def F_to_C():
@@ -106,7 +110,7 @@ def temperature_convert():
     '8':C_to_R, '9':K_to_R, '10':R_to_F, '11':R_to_C, '12':R_to_K
     }  
     choice = input("Select the number of the conversion here: ")
-    options[choice]()
+    print(options[choice]())
     break
   #Keyerror occurs when the input/key isn't found in the dictionary.
    except KeyError:
