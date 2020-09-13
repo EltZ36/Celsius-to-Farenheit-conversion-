@@ -17,14 +17,14 @@ def Repeat():
 #Fahrenheit to Celsius, Kelvin, and Rankine conversions
 def F_to_C():
   f = float(input("How many degrees Fahrenheit?"))
-  C1 = ( ( (f - 32) * 5) /9)
+  C1 = ((f - 32) * (5/9))
   # Have to convert this(C1) into a string as it is a float and can't be added with another string.
   print(str(C1) + ' degrees Fahrenheit')
   Repeat()
   
 def F_to_K():
   f2 = float(input("How many degrees Fahrenheit?"))
-  K2 = ((((f2 -32) * 5) /9) +273.15)
+  K2 = (((f2 -32) * 5/9) + 273.15)
   print(str(K2) + ' degrees Kelvin')
   Repeat()
 
@@ -50,7 +50,7 @@ def C_to_K():
 
 def C_to_R():
   c3 = float(input("How many degrees Celsius"))
-  R2 = (((c3)*9/5)+491.67)
+  R2 = (((c3) * 9/5 ) + 491.67)
   print(str(R2)+" degrees Rankine")
   Repeat()
   
@@ -70,7 +70,7 @@ def K_to_F():
 
 def K_to_R():
   k3 = float(input("How many degrees Kelvin?"))
-  R3 = (k3*1.8)
+  R3 = (k3 * 1.8)
   print(str(R3)+" degrees Rankine")
   Repeat()
   
@@ -83,7 +83,7 @@ def R_to_F():
 
 def R_to_C():
   r2 = (float(input("How many degrees Rankine?")))
-  C3 = ((r2 -491.67)*5/9)
+  C3 = ((r2 - 491.67) * 5/9)
   print(str(C3)+" degrees Celsius")
   Repeat()
 
