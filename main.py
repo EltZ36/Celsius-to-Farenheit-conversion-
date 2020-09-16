@@ -3,13 +3,13 @@ Goals: -More clean and readable code.
 -Make the temperature conversions more accurate.
 '''
 
-
 def Repeat():
   while True:
     try:
       Again = input("Do you want to convert again? (Y) or (N)")
       Options = {"Y":temperature_convert, "y":temperature_convert, " y":temperature_convert, "Y":temperature_convert, "N":exit, "n":exit}
       print(Options[Again]())
+    #Keyerror occurs when the input/key isn't found in the dictionary.
     except KeyError:
       print("Try to enter (Y) or (N) again.")
       Repeat()
@@ -38,7 +38,7 @@ def F_to_R():
 def C_to_F():
   # float allows for both integers and decimals.
   c = float(input("How many degrees Centigrade?"))
-  F1 = ( ( (c/5) * 9 ) + 32)
+  F1 = (c *(9/5) + 32)
   print(str(F1) + ' degrees Centigrade')
   Repeat()
 
@@ -104,7 +104,6 @@ def temperature_convert():
   print(Question)
   while True:
    try:
-    #using a dictionary to reduce the amount of if statements.
     options ={
     "1":C_to_F, "2":F_to_C, "3":C_to_K, '4':F_to_K, '5':K_to_C, '6':K_to_F, '7':F_to_R , 
     '8':C_to_R, '9':K_to_R, '10':R_to_F, '11':R_to_C, '12':R_to_K
@@ -112,7 +111,6 @@ def temperature_convert():
     choice = input("Select the number of the conversion here: ")
     print(options[choice]())
     break
-  #Keyerror occurs when the input/key isn't found in the dictionary.
    except KeyError:
     print("Sorry, please type in the number of the conversion again")
     continue 
