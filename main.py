@@ -3,24 +3,28 @@ Goals: -More clean and readable code.
 -Make the temperature conversions more accurate.
 '''
 
-
 def Repeat():
-  Again = input("Do you want to convert again? (Y) or (N)")
-  if Again == "Y" or Again == " Y" or Again =="y":
-    temperature_convert()
-  return None
+  while True:
+    try:
+      Again = input("Do you want to convert again? (Y) or (N)")
+      Options = {"Y":temperature_convert, "y":temperature_convert, " y":temperature_convert, "Y":temperature_convert, "N":exit, "n":exit}
+      print(Options[Again]())
+    #Keyerror occurs when the input/key isn't found in the dictionary.
+    except KeyError:
+      print("Try to enter (Y) or (N) again.")
+      Repeat()
 
 #Fahrenheit to Celsius, Kelvin, and Rankine conversions
 def F_to_C():
   f = float(input("How many degrees Fahrenheit?"))
-  C1 = ( ( (f - 32) * 5) /9)
+  C1 = ((f - 32) * (5/9))
   # Have to convert this(C1) into a string as it is a float and can't be added with another string.
   print(str(C1) + ' degrees Fahrenheit')
   Repeat()
   
 def F_to_K():
   f2 = float(input("How many degrees Fahrenheit?"))
-  K2 = ((((f2 -32) * 5) /9) +273.15)
+  K2 = (((f2 -32) * 5/9) + 273.15)
   print(str(K2) + ' degrees Kelvin')
   Repeat()
 
@@ -34,7 +38,7 @@ def F_to_R():
 def C_to_F():
   # float allows for both integers and decimals.
   c = float(input("How many degrees Centigrade?"))
-  F1 = ( ( (c/5) * 9 ) + 32)
+  F1 = (c *(9/5) + 32)
   print(str(F1) + ' degrees Centigrade')
   Repeat()
 
@@ -46,7 +50,7 @@ def C_to_K():
 
 def C_to_R():
   c3 = float(input("How many degrees Celsius"))
-  R2 = (((c3)*9/5)+491.67)
+  R2 = (((c3) * 9/5 ) + 491.67)
   print(str(R2)+" degrees Rankine")
   Repeat()
   
@@ -66,7 +70,7 @@ def K_to_F():
 
 def K_to_R():
   k3 = float(input("How many degrees Kelvin?"))
-  R3 = (k3*1.8)
+  R3 = (k3 * 1.8)
   print(str(R3)+" degrees Rankine")
   Repeat()
   
@@ -79,7 +83,7 @@ def R_to_F():
 
 def R_to_C():
   r2 = (float(input("How many degrees Rankine?")))
-  C3 = ((r2 -491.67)*5/9)
+  C3 = ((r2 - 491.67) * 5/9)
   print(str(C3)+" degrees Celsius")
   Repeat()
 
@@ -100,15 +104,13 @@ def temperature_convert():
   print(Question)
   while True:
    try:
-    #using a dictionary to reduce the amount of if statements.
     options ={
     "1":C_to_F, "2":F_to_C, "3":C_to_K, '4':F_to_K, '5':K_to_C, '6':K_to_F, '7':F_to_R , 
     '8':C_to_R, '9':K_to_R, '10':R_to_F, '11':R_to_C, '12':R_to_K
     }  
     choice = input("Select the number of the conversion here: ")
-    options[choice]()
+    print(options[choice]())
     break
-  #Keyerror occurs when the input/key isn't found in the dictionary.
    except KeyError:
     print("Sorry, please type in the number of the conversion again")
     continue 
