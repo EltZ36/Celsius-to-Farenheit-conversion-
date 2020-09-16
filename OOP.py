@@ -29,14 +29,14 @@ class Fahrenheit(Temperature):
   def F_to_C(self):
     self.input() 
     # Fahrenheit to Celsius 
-    x = (((self.degrees -32) * 5) /9)
+    x = ((self.degrees -32) * (5/9))
     #using an F string
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def F_to_K(self):
     self.input()
     # Fahrenheit to Kelvin 
-    x = ((((self.degrees-32)*5)/9)+273.15)
+    x = (((self.degrees-32)*(5/9))+273.15)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def F_to_R(self):
@@ -51,7 +51,7 @@ class Celsius(Temperature):
   def C_to_F(self):
     self.input()
     # Celsius to Fahrenheit
-    x = (((self.degrees / 5) * 9)  + 32)
+    x = ((self.degrees * (9/5)  + 32))
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def C_to_K(self):
@@ -84,7 +84,7 @@ class Kelvin(Temperature):
   def K_to_R(self):
     # Kelvin to Rankine
     self.input()
-    x = self.degrees * 1.8
+    x = (self.degrees * 1.8)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
 
