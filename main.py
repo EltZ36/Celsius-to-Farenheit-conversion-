@@ -63,9 +63,9 @@ def K_to_C():
   Repeat()
 
 def K_to_F():
-  k2 = float(input("How many degrees Kelvin?"))
+  k2 = float(input("How much Kelvin?"))
   F2 = (((k2 - 273.15) * 9/5) + 32) 
-  print(str(F2) + " degrees Kelvin")
+  print(str(F2) + " Kelvin")
   Repeat()
 
 def K_to_R():
@@ -90,7 +90,7 @@ def R_to_C():
 def R_to_K():
   r3 = (float(input("How many degrees Rankine?")))
   K3 = (r3 * 5/9)
-  print(str(K3)+" degrees Kelvin")
+  print(str(K3)+" Kelvin")
   Repeat()
 
 def temperature_convert():
