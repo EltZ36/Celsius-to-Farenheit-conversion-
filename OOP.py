@@ -9,7 +9,7 @@ class Temperature:
     self.degrees = degrees
     self.kind = kind
   def input(self):
-    Player_input = int(input("How many degrees?"))
+    Player_input = float(input("How many degrees?"))
     self.degrees = Player_input
   def Repeat():
     while True:
@@ -27,19 +27,20 @@ class Fahrenheit(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind) 
   def F_to_C(self):
-    self.input() 
     # Fahrenheit to Celsius 
+    self.input() 
     x = ((self.degrees -32) * (5/9))
     #using an F string
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def F_to_K(self):
-    self.input()
     # Fahrenheit to Kelvin 
+    self.input()
     x = (((self.degrees-32)*(5/9))+273.15)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def F_to_R(self):
+    # Fahrenheit to Rankine
     self.input()
     x = self.degrees + 459.67
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
@@ -49,18 +50,19 @@ class Celsius(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
   def C_to_F(self):
+     # Celsius to Fahrenheit
     self.input()
-    # Celsius to Fahrenheit
     x = ((self.degrees * (9/5)  + 32))
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def C_to_K(self):
-    self.input()
     # Celsius to Kelvin 
+    self.input()
     x = ( self.degrees + 273.15)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
   def C_to_R(self):
+    # Celsius to Rankine
     self.input()
     x = ((self.degrees * 9/5)+491.67)
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
@@ -70,8 +72,8 @@ class Kelvin(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
   def K_to_F(self):
-    self.input()
     # Kelvin to Fahrenheit
+    self.input()
     x = ((9/5 * (self.degrees-273.15))+32) 
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
     self.Repeat()
