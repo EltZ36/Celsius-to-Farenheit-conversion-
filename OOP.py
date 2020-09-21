@@ -132,7 +132,7 @@ def Setup():
     #using a dictionary to reduce the amount of if statements.
     options ={
     "1":Temp1.F_to_C, "2":Temp1.F_to_K, "3":Temp1.F_to_R, "4":Temp2.C_to_F, "5":Temp2.C_to_K, 
-    "6":Temp2.C_to_R, "7":Temp3.K_to_F, "8":Temp3.K_to_C, "9":Temp3.K_to_R
+    "6":Temp2.C_to_R, "7":Temp3.K_to_F, "8":Temp3.K_to_C, "9":Temp3.K_to_R,
     "10":Temp4.R_to_C, "11":Temp4.R_to_F, "12":Temp4.R_to_K 
     }  
     choice = input("Select the number of the conversion here: ")
