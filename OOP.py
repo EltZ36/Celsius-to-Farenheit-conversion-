@@ -37,7 +37,7 @@ class Fahrenheit(Temperature):
     # Fahrenheit to Kelvin 
     self.input()
     x = (((self.degrees-32)*(5/9))+273.15)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} Kelvin.'
     self.Repeat()
   def F_to_R(self):
     # Fahrenheit to Rankine
@@ -59,7 +59,7 @@ class Celsius(Temperature):
     # Celsius to Kelvin 
     self.input()
     x = ( self.degrees + 273.15)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} Kelvin.'
     self.Repeat()
   def C_to_R(self):
     # Celsius to Rankine
@@ -75,19 +75,19 @@ class Kelvin(Temperature):
     # Kelvin to Fahrenheit
     self.input()
     x = ((9/5 * (self.degrees-273.15))+32) 
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} {self.kind} converts to {x} degrees.'
     self.Repeat()
   def K_to_C(self):
     # Kelvin to Celsius
     self.input()
     x = (self.degrees - 273.15)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} {self.kind} converts to {x} degrees.'
     self.Repeat()
   def K_to_R(self):
     # Kelvin to Rankine
     self.input()
     x = (self.degrees * 1.8)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} {self.kind} converts to {x} degrees.'
     self.Repeat()
 
 class Rankine(Temperature):
@@ -109,7 +109,7 @@ class Rankine(Temperature):
     # Rankine to Kelvin 
     self.input()
     x = (self.degrees *5/9)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} Kelvin.'
     self.Repeat()
 
 #I like to call the functions that display the outputs Setup() but you can call it whatever you want. 
@@ -120,7 +120,7 @@ def Setup():
   \nRankine to Celsius (10) \nRankine to Fahrenheit (11) Rankine to Kelvin (12)
   """
   print(Response)
-  '''Temp1 is an instance of the Fahrenheit class, Temp2 is an instance of the Celsius class, and so on.
+  '''Temp1 is the reference variable of the Fahrenheit and I don't think it is an instance.
   I put in 0 as a placeholder for self.degrees as it doesn't matter and the person will choose the degrees anyway.
   '''
   Temp1 = Fahrenheit(0, "Fahrenheit")
