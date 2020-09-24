@@ -11,6 +11,11 @@ class Temperature:
   def input(self):
     Player_input = float(input("How many degrees?"))
     self.degrees = Player_input
+  def types(self):
+    C = "Celsius"
+    F = "Fahrenheit"
+    K = "Kelvin"
+    R = "Rankine"
   def Repeat():
     while True:
       try:
@@ -31,7 +36,7 @@ class Fahrenheit(Temperature):
     self.input() 
     x = ((self.degrees -32) * (5/9))
     #using an F string
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees Celsius.'
     self.Repeat()
   def F_to_K(self):
     # Fahrenheit to Kelvin 
@@ -43,7 +48,7 @@ class Fahrenheit(Temperature):
     # Fahrenheit to Rankine
     self.input()
     x = self.degrees + 459.67
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees Rankine.'
     self.Repeat()
 
 class Celsius(Temperature):
@@ -53,7 +58,7 @@ class Celsius(Temperature):
      # Celsius to Fahrenheit
     self.input()
     x = ((self.degrees * (9/5)  + 32))
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees Fahrenheit.'
     self.Repeat()
   def C_to_K(self):
     # Celsius to Kelvin 
@@ -65,29 +70,32 @@ class Celsius(Temperature):
     # Celsius to Rankine
     self.input()
     x = ((self.degrees * 9/5)+491.67)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees Rankine.'
     self.Repeat()
 
 class Kelvin(Temperature):
   def __init__(self, degrees, kind):
     super().__init__(degrees, kind)
+  def Kelvin_input(self):
+    Player_input = float(input("How much Kelvin?"))
+    self.degrees = Player_input
   def K_to_F(self):
     # Kelvin to Fahrenheit
     self.input()
     x = ((9/5 * (self.degrees-273.15))+32) 
-    return f'{self.degrees} {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} {self.kind} converts to {x} degrees Fahrenheit.'
     self.Repeat()
   def K_to_C(self):
     # Kelvin to Celsius
     self.input()
     x = (self.degrees - 273.15)
-    return f'{self.degrees} {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} {self.kind} converts to {x} degrees Celsius.'
     self.Repeat()
   def K_to_R(self):
     # Kelvin to Rankine
     self.input()
     x = (self.degrees * 1.8)
-    return f'{self.degrees} {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} {self.kind} converts to {x} degrees Rankine.'
     self.Repeat()
 
 class Rankine(Temperature):
@@ -97,13 +105,13 @@ class Rankine(Temperature):
     # Rankine to Fahrenheit
     self.input()
     x = (self.degrees - 459.67)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees Fahrenheit.'
     self.Repeat()
   def R_to_C(self):
     # Rankine to Celsius 
     self.input()
     x = ((self.degrees - 459.67)*5/9)
-    return f'{self.degrees} degrees {self.kind} converts to {x} degrees.'
+    return f'{self.degrees} degrees {self.kind} converts to {x} degrees Celsius.'
     self.Repeat()
   def R_to_K(self):
     # Rankine to Kelvin 
