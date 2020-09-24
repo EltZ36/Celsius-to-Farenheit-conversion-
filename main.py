@@ -18,6 +18,7 @@ def Repeat():
 def F_to_C():
   f = float(input("How many degrees Fahrenheit?"))
   C1 = ((f - 32) * (5/9))
+  # Float allows for both integers and decimals.
   # Have to convert this(C1) into a string as it is a float and can't be added with another string.
   print(str(C1) + ' degrees Fahrenheit')
   Repeat()
@@ -25,7 +26,7 @@ def F_to_C():
 def F_to_K():
   f2 = float(input("How many degrees Fahrenheit?"))
   K2 = (((f2 -32) * 5/9) + 273.15)
-  print(str(K2) + ' degrees Kelvin')
+  print(str(K2) + ' Kelvin')
   Repeat()
 
 def F_to_R():
@@ -36,7 +37,6 @@ def F_to_R():
 
 #Celsius to Fahrenheit, Kelvin, and Rankine conversions
 def C_to_F():
-  # float allows for both integers and decimals.
   c = float(input("How many degrees Centigrade?"))
   F1 = (c *(9/5) + 32)
   print(str(F1) + ' degrees Centigrade')
@@ -45,7 +45,7 @@ def C_to_F():
 def C_to_K():
   c2 = float(input("How many degrees Centigrade?"))
   K = (c2 + 273.15)
-  print(str(K) + " degrees Kelvin")
+  print(str(K) + " Kelvin")
   Repeat()
 
 def C_to_R():
@@ -57,19 +57,19 @@ def C_to_R():
 
 #Kelvin to Celsius, Fahrenheit, and Rankine conversions
 def K_to_C():
-  k1 = float(input("How many degrees Kelvin?"))
+  k1 = float(input("How much Kelvin?"))
   C2 = (k1 - 273.15)
   print(str(c2) + " degrees Celsius")
   Repeat()
 
 def K_to_F():
-  k2 = float(input("How may degrees Kelvin?"))
+  k2 = float(input("How much Kelvin?"))
   F2 = (((k2 - 273.15) * 9/5) + 32) 
-  print(str(F2) + " degrees Kelvin")
+  print(str(F2) + " Kelvin")
   Repeat()
 
 def K_to_R():
-  k3 = float(input("How many degrees Kelvin?"))
+  k3 = float(input("How much Kelvin?"))
   R3 = (k3 * 1.8)
   print(str(R3)+" degrees Rankine")
   Repeat()
@@ -90,14 +90,15 @@ def R_to_C():
 def R_to_K():
   r3 = (float(input("How many degrees Rankine?")))
   K3 = (r3 * 5/9)
-  print(str(K3)+" degrees Kelvin")
+  print(str(K3)+" Kelvin")
   Repeat()
 
 def temperature_convert():
  # Lines 55 - 70 check if the input is correct and if it is, then it will convert the temperature. Otherwise if the input(key) isn't found, the while loop will continue.
   Question = """Which conversion do you want?
-  \n- Centigrade to Fahrenheit (1) - Fahrenheit to Centigrade(2) \n- Centigrade to Kelvin (3) - Fahrenheit to Kelvin (4) 
-  \n-Kelvin to Centigrade (5) - Kelvin to Fahrenheit (6) 
+  \n- Centigrade to Fahrenheit (1) - Fahrenheit to Centigrade(2) 
+  \n- Centigrade to Kelvin (3) - Fahrenheit to Kelvin (4) 
+  \n- Kelvin to Centigrade (5) - Kelvin to Fahrenheit (6) 
   \n- Fahrenheit to Rankine (7) - Celsius to Rankine (8) - Kelvin to Rankine (9) 
   \n- Rankine to Fahrenheit (10) -Rankine to Celsius (11) -Rankine to Kelvin (12)
   """
