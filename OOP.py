@@ -11,14 +11,10 @@ class Temperature:
   def input(self):
     Player_input = float(input("How many degrees?"))
     self.degrees = Player_input
-  def types(self):
-    C = "Celsius"
-    F = "Fahrenheit"
-    K = "Kelvin"
-    R = "Rankine"
   def Repeat():
     while True:
       try:
+        #using a dictionary to reduce the amount of if statements.
         y_or_n = input("Do you want to convert again? (Y) or (N)")
         repeat = {"Y": Setup, "y":Setup, " y":Setup, " Y":Setup, 
         "N":exit, "n":exit, " n":exit, " N":exit}
@@ -137,7 +133,6 @@ def Setup():
   Temp4 = Rankine(0, "Rankine")
   while True:
    try:
-    #using a dictionary to reduce the amount of if statements.
     options ={
     "1":Temp1.F_to_C, "2":Temp1.F_to_K, "3":Temp1.F_to_R, "4":Temp2.C_to_F, "5":Temp2.C_to_K, 
     "6":Temp2.C_to_R, "7":Temp3.K_to_F, "8":Temp3.K_to_C, "9":Temp3.K_to_R,
