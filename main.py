@@ -14,7 +14,7 @@ def Repeat():
       print("Try to enter (Y) or (N) again.")
       Repeat()
 
-#Fahrenheit to Celsius, Kelvin, and Rankine conversions
+#Fahrenheit to Centigrade, Kelvin, and Rankine conversions
 def F_to_C():
   f = float(input("How many degrees Fahrenheit?"))
   C1 = ((f - 32) * (5/9))
@@ -35,7 +35,7 @@ def F_to_R():
   print(str(R3) + ' degrees Rankine')
   Repeat()
 
-#Celsius to Fahrenheit, Kelvin, and Rankine conversions
+#Centigrade to Fahrenheit, Kelvin, and Rankine conversions
 def C_to_F():
   c = float(input("How many degrees Centigrade?"))
   F1 = (c *(9/5) + 32)
@@ -49,17 +49,17 @@ def C_to_K():
   Repeat()
 
 def C_to_R():
-  c3 = float(input("How many degrees Celsius"))
+  c3 = float(input("How many degrees Centigrade"))
   R2 = (((c3) * 9/5 ) + 491.67)
   print(str(R2)+" degrees Rankine")
   Repeat()
   
 
-#Kelvin to Celsius, Fahrenheit, and Rankine conversions
+#Kelvin to Centigrade, Fahrenheit, and Rankine conversions
 def K_to_C():
   k1 = float(input("How much Kelvin?"))
   C2 = (k1 - 273.15)
-  print(str(c2) + " degrees Celsius")
+  print(str(c2) + " degrees Centigrade")
   Repeat()
 
 def K_to_F():
@@ -84,7 +84,7 @@ def R_to_F():
 def R_to_C():
   r2 = (float(input("How many degrees Rankine?")))
   C3 = ((r2 - 491.67) * 5/9)
-  print(str(C3)+" degrees Celsius")
+  print(str(C3)+" degrees Centigrade")
   Repeat()
 
 def R_to_K():
@@ -99,7 +99,7 @@ def temperature_convert():
   \n- Centigrade to Fahrenheit (1) - Fahrenheit to Centigrade(2) 
   \n- Centigrade to Kelvin (3) - Fahrenheit to Kelvin (4) 
   \n- Kelvin to Centigrade (5) - Kelvin to Fahrenheit (6) 
-  \n- Fahrenheit to Rankine (7) - Celsius to Rankine (8) - Kelvin to Rankine (9) 
+  \n- Fahrenheit to Rankine (7) - Centigrade to Rankine (8) - Kelvin to Rankine (9) 
   \n- Rankine to Fahrenheit (10) -Rankine to Celsius (11) -Rankine to Kelvin (12)
   """
   print(Question)
