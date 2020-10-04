@@ -7,7 +7,8 @@ def Repeat():
   while True:
     try:
       Again = input("Do you want to convert again? (Y) or (N)")
-      Options = {"Y":temperature_convert, "y":temperature_convert, " y":temperature_convert, "Y":temperature_convert, "N":exit, "n":exit}
+      Options = {"Y":temperature_convert, "y":temperature_convert, " y":temperature_convert, " Y":temperature_convert, 
+      "N":exit, "n":exit, " N":exit, " n":exit}
       print(Options[Again]())
     #Keyerror occurs when the input/key isn't found in the dictionary.
     except KeyError:
