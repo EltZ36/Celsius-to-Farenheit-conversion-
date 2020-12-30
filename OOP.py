@@ -31,7 +31,6 @@ class Fahrenheit(Temperature):
     # Fahrenheit to Celsius 
     self.input() 
     x = ((self.degrees -32) * (5/9))
-    #using an F string
     return f'{self.degrees} degrees {self.kind} converts to {x} degrees Celsius.'
     self.Repeat()
   def F_to_K(self):
