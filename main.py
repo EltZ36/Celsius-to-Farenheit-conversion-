@@ -138,6 +138,7 @@ def temperature_convert():
     }  
     choice = input("Select the number of the conversion here: ")
     print(options[choice]())
+    #you can choose to omit the break but you should do this just in case
     break
    except KeyError:
     print("Sorry, please type in the number of the conversion again")
