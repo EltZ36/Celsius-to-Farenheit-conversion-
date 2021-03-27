@@ -124,7 +124,7 @@ def Setup():
   """
   print(Response)
   '''Temp1 is instance of the Fahrenheit class and Temp2 is an instance of the Celsius class.
-  I put in 0 as a placeholder for self.degrees as it doesn't matter and the person will choose the degrees anyway.
+  I put in 0 as a placeholder for self.degrees as the person will choose the degrees anyway.
   '''
   Temp1 = Fahrenheit(0, "Fahrenheit")
   Temp2 = Celsius(0, "Celsius")
@@ -143,6 +143,6 @@ def Setup():
     print(repeat)
     break
    except KeyError:
-    print("Sorry, please type in the number of the conversion again")
+    print("Sorry, please type in the number of the conversion again.")
     continue   
 Setup()
