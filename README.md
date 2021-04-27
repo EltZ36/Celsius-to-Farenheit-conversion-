@@ -9,3 +9,5 @@ Notes: There is also an Object Oriented Programming version of this called OOP.p
 Do not use the OOP as a template for how to use OOP as this is most likely the incorrect way to do so. The syntax for OOP is of course correct and I did the OOP version to learn more about OOP. 
 
 Warning: I have added exit when the program ends. If you don't want that, you can remove it or replace it with something else. You can import sys and use sys.exit instead.
+
+Current issue: f-strings give off syntax error
