@@ -1,6 +1,6 @@
 # Temperature Converter
 
-Requirements: Needs a console to show the text/results, and IDE using Python 3 or the Python 3 IDLE.
+Requirements: Needs a console to show the text/results, and IDE using Python 3.8 or higher. 
 
 Recommendations: use Repl.it or some other IDE (Pycharm, Visual Studio, etc.) to run the files or the Python 3 IDLE to run it. 
 You can find the Python 3 IDLE online and install it from there the website is https://www.python.org/downloads/. 
