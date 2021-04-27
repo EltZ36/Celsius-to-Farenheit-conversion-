@@ -10,4 +10,3 @@ Do not use the OOP as a template for how to use OOP as this is most likely the i
 
 Warning: I have added exit when the program ends. If you don't want that, you can remove it or replace it with something else. You can import sys and use sys.exit instead.
 
-Current issue: f-strings give off syntax error
